@@ -4,4 +4,14 @@ Test!
 <%= button_to "Turn right", {:controller => "rubytest", :action => "right"}, :method => "put", :remote => true %>
 <%= button_to "Connection closed", {:controller => "rubytest", :action => "close"}, :method => "put", :remote => true %>
 
+<script>
+$(document).ready(
+         function() {
+          setInterval(function() {
+            $('.image').load('/rubytest/refreshSnapshot');
+        }, 3000);
+    });
+</script>
+
+<div class="image"><%= render partial: 'refreshSnapshot' %></div>
 <span id="message"></span>
