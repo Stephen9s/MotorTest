@@ -16,3 +16,4 @@
 *.class
 *.pyc
 *.pyo
+/assets/images/snapshots/*
