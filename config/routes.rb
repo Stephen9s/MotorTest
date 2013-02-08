@@ -56,6 +56,7 @@ Test::Application.routes.draw do
   match "/rubytest/right" => "rubytest#right"
   match "/rubytest/close" => "rubytest#close"
   match "/rubytest/refreshSnapshot" => "rubytest#refreshSnapshot"
+  match "/rubytest/cameraOps" => "rubytest#cameraOps"
   
   # See how all your routes lay out with "rake routes"
 

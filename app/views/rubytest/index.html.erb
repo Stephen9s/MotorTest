@@ -3,6 +3,7 @@ Test!
 <%= button_to "Turn left", {:controller => "rubytest", :action => "left"}, :method => "put", :remote => true %>
 <%= button_to "Turn right", {:controller => "rubytest", :action => "right"}, :method => "put", :remote => true %>
 <%= button_to "Connection closed", {:controller => "rubytest", :action => "close"}, :method => "put", :remote => true %>
+<%= button_to "Camera", {:controller => "rubytest", :action => "cameraOps"}, :method => "put", :remote => true %>
 
 <script>
 $(document).ready(

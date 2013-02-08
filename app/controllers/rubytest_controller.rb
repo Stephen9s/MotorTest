@@ -37,4 +37,25 @@ class RubytestController < ApplicationController
     render :partial => "rubytest/refreshSnapshot"
   end
   
+  def cameraOps
+    @status = "No change."
+    pid = system("pidof motion")
+    if pid
+      destroy = system("kill $(pidof motion)")
+      
+      if destroy
+        @status = "Motion destroyed."
+      end
+    else
+      start = system("motion")
+      @status = "Motion started."
+    end
+    
+    respond_to do | format |
+        format.html   { redirect_to index_path }
+        format.js { @status }
+    end
+    
+  end
+  
 end
